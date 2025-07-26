@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+gitVersion=$(git -v | awk '{print($3)}')
+
+cat <<EOF
+{
+        "git_version": "$gitVersion"
+}
+EOF

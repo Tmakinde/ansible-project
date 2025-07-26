@@ -1,0 +1,9 @@
+plugin: gcp_compute
+projects:
+  - flowing-scholar-282701
+auth_kind: serviceaccount
+service_account_file: ansible-gpc-service-account.json
+hostnames:
+  - public_ip
+compose:
+  public_ip: "networkInterfaces[0].accessConfigs[0].natIP"
